@@ -36,4 +36,18 @@ a todos os usuários e seus dados cadastrais e que exerce poder de moderação n
 ## Status do projeto: 
 Em desenvolvimento :warning:
 
-## Demonstração da aplicação
+## Demonstração da aplicação:
+<img src="https://github.com/LucasNasc3000/globalchat-webapp/blob/master/src/uploads/globalchat-print-home-user.PNG" width=820 heigth=820/>
+<p font=12>Home do usuário comum</p>
+<br><br>
+<img src="https://github.com/LucasNasc3000/globalchat-webapp/blob/master/src/uploads/globalchat-print-home-user2.PNG" width=820 heigth=820/>
+<p font=12>Home do usuário comum - demonstração da maneira que se envia as mensagens de texto</p>
+<br><br>
+<img src="https://github.com/LucasNasc3000/globalchat-webapp/blob/master/src/uploads/globalchat-print-perfil-user.PNG" width=820 heigth=820/>
+<p font=12>Rota para o usuário alterar suas informações de cadastro</p>
+<br><br>
+<img src="https://github.com/LucasNasc3000/globalchat-webapp/blob/master/src/uploads/globalchat-print-home-admin.PNG" width=820 heigth=820/>
+<p font=12>Home do usuário administrador</p>
+<br><br>
+<img src="https://github.com/LucasNasc3000/globalchat-webapp/blob/master/src/uploads/globalchat-print-users-admin.PNG" width=820 heigth=820/>
+<p font=12>Rota que exibe os usuários, seus dados e a opção de banir ou retirar o banimento dos mesmos</p>
