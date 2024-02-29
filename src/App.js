@@ -1,24 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+/* eslint-disable import/no-extraneous-dependencies */
+import React from "react";
+import { Router } from "react-router-dom";
+import { ToastContainer } from "react-toastify";
+import { Provider } from "react-redux";
+import { PersistGate } from "redux-persist/integration/react";
+
+import store, { persistor } from "./store";
+import history from "./services/history";
+import Header from "./components/header";
+import GlobalStyles from "./styles/GlobalStyles";
+import Routes from "./routes";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Provider store={store}>
+      <PersistGate persistor={persistor}>
+        <Router history={history}>
+          <Header />
+          <Routes />
+          <GlobalStyles />
+          <ToastContainer autoClose={3000} className="toast-container" />
+        </Router>
+      </PersistGate>
+    </Provider>
   );
 }
 
