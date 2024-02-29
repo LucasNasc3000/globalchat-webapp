@@ -35,3 +35,5 @@ a todos os usuários e seus dados cadastrais e que exerce poder de moderação n
 
 ## Status do projeto: 
 Em desenvolvimento :warning:
+
+## Demonstração da aplicação
