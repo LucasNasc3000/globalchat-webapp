@@ -32,3 +32,6 @@ a todos os usuários e seus dados cadastrais e que exerce poder de moderação n
 - React js
 - Axios
 - Styled components
+
+## Status do projeto: 
+Em desenvolvimento :warning:
