@@ -34,7 +34,7 @@ a todos os usuários e seus dados cadastrais e que exerce poder de moderação n
 - Styled components
 
 ## Status do projeto: 
-Em desenvolvimento :heavy_check_mark:
+Finalizado ✔️
 
 ## Demonstração da aplicação:
 <img src="https://github.com/LucasNasc3000/globalchat-webapp/blob/master/src/uploads/globalchat-print-home-user.PNG" width=820 heigth=820/>
