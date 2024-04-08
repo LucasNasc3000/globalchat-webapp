@@ -117,8 +117,8 @@ export default function AdminPage() {
           placeholder="Pesquisar usuários..."
         />
         <Link
-         to={`/adminpage/users/search/${searchBy}/${searchValue}`}
-         className="searchLink"
+        to={`/adminpage/users/search/${searchBy}/${searchValue}`}
+        className="searchLink"
         >
           <FaSearch size={26} />
         </Link>

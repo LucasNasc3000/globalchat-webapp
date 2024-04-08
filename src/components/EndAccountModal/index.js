@@ -38,9 +38,11 @@ export default function EndAccountModal() {
   return (
     <Container>
       <div>
-        <p>{`Deseja realmente excluir sua conta?
-             Esta ação não poderá ser desfeita e seus dados serão apagados
-             permanentemente até que você crie outra conta`}</p>
+        <p>
+          Deseja realmente excluir sua conta? Esta ação não poderá ser desfeita
+          e seus dados serão apagados permanentemente até que você crie outra
+          conta
+        </p>
       </div>
       <button
         type="button"
