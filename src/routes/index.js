@@ -21,7 +21,7 @@ import EndAccountModal from "../components/EndAccountModal";
 export default function Routes() {
   return (
     <Switch>
-      <MyRoute exact path="/" component={Home} isClosed={false} />
+      <MyRoute exact path="/" component={Home} isClosed />
       <MyRoute exact path="/login/" component={Login} isClosed={false} />
       <MyRoute exact path="/register/" component={Register} isClosed={false} />
       <MyRoute exact path="/profile/:id" component={Profile} isClosed />
