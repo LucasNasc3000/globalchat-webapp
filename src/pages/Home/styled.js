@@ -8,13 +8,6 @@ export const TextContainer = styled.div`
   overflow: auto;
   max-height: 400px;
 
-  @media only screen and (min-width: 200px) {
-    body {
-      height: 200px;
-      max-height: 200px;
-    }
-  }
-
   div {
     display: flex;
     margin: auto;

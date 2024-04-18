@@ -11,6 +11,13 @@ export default createGlobalStyle`
     box-sizing: border-box;
   }
 
+  @media only screen and (min-width: 200px) {
+    body {
+      height: 200px;
+      max-height: 200px;
+    }
+  }
+
   body {
     font-family: sans-serif;
     overflow-y: auto;
