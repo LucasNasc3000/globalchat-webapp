@@ -11,13 +11,6 @@ export default createGlobalStyle`
     box-sizing: border-box;
   }
 
-  @media only screen and (min-width: 300px) {
-    div {
-      height: 150px;
-      max-height: 150px;
-    }
-  }
-
   body {
     font-family: sans-serif;
     overflow-y: auto;
@@ -73,6 +66,7 @@ export const Container = styled.section`
     section {
       max-width: 300px;
       max-height: 300px;
+      margin-left: 100px;
     }
   }
 `;
