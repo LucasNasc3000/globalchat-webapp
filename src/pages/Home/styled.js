@@ -10,6 +10,7 @@ export const TextContainer = styled.div`
 
   @media only screen and (min-width: 600px) {
     body {
+      height: 200px;
       max-height: 200px;
     }
   }
