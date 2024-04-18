@@ -11,10 +11,10 @@ export default createGlobalStyle`
     box-sizing: border-box;
   }
 
-  @media only screen and (min-width: 600px) {
-    body {
-      height: 200px;
-      max-height: 200px;
+  @media only screen and (min-width: 300px) {
+    div {
+      height: 150px;
+      max-height: 150px;
     }
   }
 
@@ -70,7 +70,9 @@ export const Container = styled.section`
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 
   @media only screen and (min-width: 600px) {
-    height: 200px;
-    max-height: 200px;
+    section {
+      max-width: 300px;
+      max-height: 300px;
+    }
   }
 `;
