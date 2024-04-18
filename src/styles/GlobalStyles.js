@@ -11,7 +11,7 @@ export default createGlobalStyle`
     box-sizing: border-box;
   }
 
-  @media only screen and (min-width: 200px) {
+  @media only screen and (min-width: 600px) {
     body {
       height: 200px;
       max-height: 200px;
@@ -68,4 +68,9 @@ export const Container = styled.section`
   padding: 30px;
   border-radius: 4px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+
+  @media only screen and (min-width: 200px) {
+    height: 200px;
+    max-height: 200px;
+  }
 `;
