@@ -55,12 +55,4 @@ export const Container = styled.section`
   padding: 30px;
   border-radius: 4px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-
-  @media only screen and (min-width: 300px) {
-    section {
-      max-width: 300px;
-      max-height: 300px;
-      margin-left: 100px;
-    }
-  }
 `;
