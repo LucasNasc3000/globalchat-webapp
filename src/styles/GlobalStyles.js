@@ -18,7 +18,7 @@ export default createGlobalStyle`
     color: ${colors.primaryDarkColor};
   }
 
-  @media only screen and (min-width: 320px){
+  @media only screen and (min-width: 300px){
     section {
       background-color: #fff;
     }
