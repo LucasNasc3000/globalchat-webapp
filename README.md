@@ -4,7 +4,7 @@
 Global Chat é um projeto desenvolvido para colocar em prática meus conhecimentos em Javascript, suas
 ferramentas e frameworks, tanto no back-end quanto no front-end.
 
-O projeto é uma página simples de troca de mensagens por texto, na qual os usuários devem estar cadastrados na mesma para
+O projeto é uma página simples de troca de mensagens por texto em tempo real, na qual os usuários devem estar cadastrados na mesma para
 que possam usa-la. Além do usuário comum também existe o usuário moderador ou administrador, que tem acesso
 a todos os usuários e seus dados cadastrais e que exerce poder de moderação no chat.
 
