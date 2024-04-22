@@ -45,12 +45,6 @@ export default createGlobalStyle`
   ul {
     list-style: none;
   }
-
-  /* Para trocar a cor das notificações do toastify -->
-  body .Toastify .Toastify__toast-container .Toastify__toast--success {
-    background: ${colors.successColor};
-  }
-  */
 `;
 
 export const Container = styled.section`
