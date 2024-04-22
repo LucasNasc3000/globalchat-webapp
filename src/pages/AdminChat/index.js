@@ -3,19 +3,21 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import React, { useState, useEffect } from "react";
 import { toast } from "react-toastify";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import { get } from "lodash";
 import { Link } from "react-router-dom/cjs/react-router-dom.min";
 import { Container } from "../../styles/GlobalStyles";
 import { Form, TextContainer } from "./styled";
 import axios from "../../services/axios";
 import history from "../../services/history";
+import * as actions from "../../store/modules/auth/actions";
 
 // Este componente é básicamente uma cópia da home (chat dos usuários comuns), com apenas uma função dife-
 // rente, a possibilidade de excluir qualquer mensagem (poder de moderação).
 // O email e o id do usuário podem ser usados neste componente ateravés do useSelector, que
 // acessa esses dados que são armazenados no redux (pasta auth) após o login.
 export default function Home() {
+  const dispatch = useDispatch();
   const user_id = useSelector((state) => state.auth.user.id);
   const emailStored = useSelector((state) => state.auth.user.email);
   const [textcontent, setTextcontent] = useState("");
@@ -35,6 +37,16 @@ export default function Home() {
 
     setUseremail(emailStored);
   }, [emailStored, user_id]);
+
+  useEffect(() => {
+    function AdminOut() {
+      setTimeout(() => {
+        dispatch(actions.loginFailure());
+      }, 300000);
+      toast.error("Tempo limite de uso da conta de admin atingido");
+    }
+    AdminOut();
+  });
 
   /* Esta função obtêm todos os dados da tabela responsável pelas mensagens e os dados relativos às mesmas.
       Os dados recebidos da API da tabela das mensagens é colocado da variável userMessage.

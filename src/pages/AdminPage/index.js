@@ -2,7 +2,7 @@
 /* eslint-disable react/jsx-no-bind */
 /* eslint-disable react/jsx-indent-props */
 import React, { useEffect, useState } from "react";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import { FaSearch } from "react-icons/fa";
 import { get } from "lodash";
@@ -10,6 +10,7 @@ import { toast } from "react-toastify";
 import { UsersContainer, AdminView, Form } from "./styled";
 import axios from "../../services/axios";
 import history from "../../services/history";
+import * as actions from "../../store/modules/auth/actions";
 
 // O email do usuário podem ser usado neste componente ateravés do useSelector, que
 // acessa esses dados que são armazenados no redux (pasta auth) após o login.
@@ -20,10 +21,10 @@ export default function AdminPage() {
      conseguir acessar a página do administrador. Se o usuário não for o administrado, ele é
      automáticamente redirecionado para a home, onde está o chat dos usuários comuns. */
   if (emailStored !== process.env.REACT_APP_ADMIN_USER) {
-    console.log(emailStored, process.env.REACT_APP_ADMIN_USER);
     history.push("/");
   }
 
+  const dispatch = useDispatch();
   const [users, setUsers] = useState([]);
   const [isBanned, setIsBanned] = useState([]);
   const [searchBy, setSearchBy] = useState("");
@@ -62,6 +63,16 @@ export default function AdminPage() {
       });
     }
     GetIsBanned();
+  });
+
+  useEffect(() => {
+    function AdminOut() {
+      setTimeout(() => {
+        dispatch(actions.loginFailure());
+      }, 300000);
+      toast.error("Tempo limite de uso da conta de admin atingido");
+    }
+    AdminOut();
   });
 
   /* SetSearchValues verifica o que é enviado na url por meio da pesquisa que pode ser feita pelo usuário

@@ -87,16 +87,13 @@ export default function Home() {
 
     let formErrors = false;
 
-    // Validação do front-end (quantidade de linhas na mensagem)
     if (textcontent.length < 1 || textcontent.length > 1000) {
       toast.error("As mensagens não devem ter entre 1 e 1000 caracteres");
       formErrors = true;
     }
 
-    // eslint-disable-next-line no-useless-return
     if (formErrors) return;
 
-    // Aqui a mensagem é salva na base de dados
     try {
       SetMessageTime();
       await axios.post("/text", {
